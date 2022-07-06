@@ -5,36 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platzitube</title>
+    <script src="https://kit.fontawesome.com/af0bf7190a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Index.css">
 </head>
 <body>
-    <main>
+    <div class="layout">
         <header>
             <div class="header--logo">
-                <button class="header--button" type="button"><i class="fa-solid fa-bars-filter"></i></button>
-                <figure>
-                    <img src="" alt="Youtube logo">
-                </figure>
+                <button class="header--button" type="button"><i class="fa-solid fa-bars"></i></button>
+               <span class="logo--icon">
+                   <i class="fa-brands fa-youtube"></i>
+               </span>
             </div>
             <div class="header--search">
-                <input type="text" placeholder="Search videos">
-                <button class="header--button" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="header--button" type="button"><i class="fa-solid fa-microphone"></i></button>
+                <form class="header--form"  action="">
+                    <input class="header--input" type="text" placeholder="Search videos">
+                    <button class="header--button header--button header--button__gray" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="header--button" type="button"><i class="fa-solid fa-microphone"></i></button>
+                </form>
             </div>
             <div class="header--profile">
                 <button class="header--button" type="button">
                     Apps
                 </button>
                 <button class="header--button" type="button">
-                    Options
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <button class="header--button header--button__blue" type="button">
-                   I Acceder
+                    <i class="fa-solid fa-user"></i> Acceder
                 </button>
             </div>
         </header>
     <aside>
-        <ul>
+        <ul class="aside--list">
             <li>
                 <a href="/">Principal</a>
             </li>
@@ -52,6 +55,59 @@
             </li>
         </ul>
     </aside>
+    <u class="tags">
+        <li class="tags--item"> Todos </li>
+        <li class="tags--item"> web </li>
+        <li class="tags--item"> Javascript </li>
+        <li class="tags--item"> CSS </li>
+    </u>
+    <main class="videos">
+        <div class="videos-row">
+            <h2 class="videos--title">Recomendaciones</h2>
+            <div class="video">
+                <div class="video--cover">
+                  <img src="https://picsum.photos/200" alt="video cover">  
+                  <span>10:00</span>
+                  <div class="video--details">
+                          <img src="https://picsum.photos/209" alt="Video profile">                
+                          <div class="video--description" >
+                          <h2 class="video--title"> Crea tu portafolio #PlatziChallenge </h2>
+                          <p>plazi</p>
+                          <p>1000 visualizaciones - hace 4 horas </p>
+                      </div>
+                </div>
+            </div>
+            </div>
+                <div class="video">
+                    <div class="videos-row">
+                        <h2 class="videos--title">Tendencias</h2>
+                        <div class="video--cover">
+                        <img src="https://picsum.photos/200" alt="video cover">  
+                        <span>10:00</span>
+                        <div class="video--details">
+                                <img src="https://picsum.photos/209" alt="">                
+                                <div class="video--description" >
+                                <h2 class="video--title"> Crea tu portafolio #PlatziChallenge </h2>
+                                <p>plazi</p>
+                                <p>1000 visualizaciones - hace 4 horas </p>
+                    </div>
+                     </div>
+                    </div>
+                    <div class="videos-row">
+                        <h2 class="videos--title">Musica</h2>
+                        <div class="video--cover">
+                        <img src="https://picsum.photos/200" alt="video cover">  
+                        <span>10:00</span>
+                        <div class="video--details">
+                                <img src="https://picsum.photos/209" alt="">                
+                                <div class="video--description" >
+                                <h2 class="video--title"> Crea tu portafolio #PlatziChallenge </h2>
+                                <p>plazi</p>
+                                <p>1000 visualizaciones - hace 4 horas </p>
+                    </div>
+                     </div>
+                     </div>
     </main>
+    </div>
 </body>
 </html>
