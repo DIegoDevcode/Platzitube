@@ -1,6 +1,8 @@
 :root {
     --gray-color: #f8f8f8;
-    --brand-color: red; 
+    --brand-color: red;
+    --blue-color: #065fd4; 
+    --dark-color: #181818;
 }
 
 
@@ -16,7 +18,7 @@ html {
 }
 body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 
@@ -24,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-ul ol {
+ul, ol {
    list-style: none; 
 }
 .layout {
@@ -34,12 +36,10 @@ ul ol {
     "sidebar tags"
     "sidebar content"
     ;
-
     grid-template-columns: 20% 80%;
     grid-template-rows: 10%  5% 85%;
     height: 100vh;
     width: 100%;
-
 }
 
 header {
@@ -47,10 +47,11 @@ header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     padding: 0 20px;
+    position: sticky;
 }
 
 header i {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 button {
@@ -67,6 +68,15 @@ button {
     color: var(--brand-color);
 }
 
+.logo-icon{
+    display: flex;
+}
+
+.logo-icon i {
+    margin-right: 5px;
+    font-weight: 900 ;
+}
+
 /*Logo colors */
 
 
@@ -77,6 +87,7 @@ display: flex;
 justify-content: space-between;
 justify-self: left;
 align-self: center;
+
 }
 
 .header--search {
@@ -100,7 +111,22 @@ width: 100%;
 }
 .header--button_gray{
     background-color: var(--gray-color);
+    padding: 5px;
     margin: 0;
+}
+
+.header--button__blue{
+    color: var(--blue-color);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blue-color);
+    border-radius: 3px;
+}
+
+.header--button_blue i {
+    margin-right: 10px;
 }
 
 .header--profile {
@@ -116,11 +142,16 @@ aside {
     grid-area: sidebar;
     width: 100%;
     height: 100%;
+    padding: 25px;
+}
+
+.aside--list {
+    border-bottom: 2px solid var(--gray-color);
 }
 
 
 .aside--list li{
-    padding:  25px 10px;
+    padding:  15px 10px;
 }
 
 .aside--list li a{
@@ -147,6 +178,7 @@ opacity: 0.5;
   .tags li:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
   }
 
   .videos {
@@ -156,7 +188,7 @@ opacity: 0.5;
   .videos-row {
     display: grid;
     grid-template-columns:  repeat(4, 1fr);
-    grid-template-rows: 25px 300px;
+    grid-template-rows: 25px 310px;
     column-gap: 15px;
     row-gap: 10px;
   }
@@ -183,13 +215,13 @@ opacity: 0.5;
     right: 10px;
     color: white;
     background-color: rgba(0, 0,0, 0.4);
-    padding: 5px 10px;
+    padding: 4px 9px;
   }
 
 .video--details{
     display: flex;
     padding: 15px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 
@@ -201,4 +233,11 @@ opacity: 0.5;
 }
 .video--details h2, p {
     margin-bottom: 10px;
+}
+
+.video--details h2 {
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
